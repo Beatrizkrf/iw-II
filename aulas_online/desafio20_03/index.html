@@ -7,12 +7,14 @@
     <script>
         let nota = parseFloat(prompt("Digite a sua nota:"));
     
-        if (nota >=7) {
+        if (isNaN(nota) || nota < 0 || nota > 10) {
+            alert("Nota inválida! Digite um número entre 0 e 10.");
+        } else if (nota >= 7) {
             alert("Aprovado(a) ✅");
-        } else if ( nota >=5 && nota< 7){
+        } else if (nota >= 5 && nota < 7) {
             alert("Recuperação ⚠️");
         } else {
-            alert("Reprovado(a) ❌ ");
+            alert("Reprovado(a) ❌");
         }
     </script>
 </head>
