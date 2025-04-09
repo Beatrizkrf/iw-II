@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+</body>
+
+<script>
+    function exibirMenu() {
+        return prompt(
+            "===== MENU INTERATIVO =====\n" +
+            "1 - Calcular média\n" +
+            "2 - Ver mensagem\n" +
+            "3 - Sair\n" +
+            "Escolha uma opção:"
+        );
+    }
+
+    function executarOpcao(opcao) {
+        switch (opcao) {
+            case "1":
+                let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+                let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+                if (isNaN(nota1) || isNaN(nota2)) {
+                    alert("Erro: Você deve digitar notas válidas.");
+                } else {
+                    let media = (nota1 + nota2) / 2;
+                    if (media >= 7) {
+                        alert(`Média: ${media.toFixed(2)}\nSituação: Aprovado 🎉`);
+                    } else if (media >= 5) {
+                        alert(`Média: ${media.toFixed(2)}\nSituação: Recuperação 🟡`);
+                    } else {
+                        alert(`Média: ${media.toFixed(2)}\nSituação: Reprovado ❌`);
+                    }
+                }
+                break;
+            case "2":
+                alert("Olá! Bem-vindo ao menu interativo.");
+                break;
+            case "3":
+                alert("Saindo... Até mais!");
+                return false;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+        return true;
+    }
+
+    function iniciarMenu() {
+        let continuar = true;
+        while (continuar) {
+            let opcao = exibirMenu();
+            continuar = executarOpcao(opcao);
+        }
+    }
+
+    iniciarMenu();
+</script>
+
+</html>
