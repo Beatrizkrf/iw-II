@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10/04 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9672aa;
+            color: #333;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #dcdadd;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px auto;
+            width: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercício 02</h1>
+    <p>Escreva um programa que solicite que o usuário insira sua idade. O programa deve verificar se o usuário tem 18 anos de idade ou mais e exibir uma mensagem indicando se ele é um adulto ou um menor.</p>
+
+    <script>
+        var idade= parseInt(prompt("Digite sua idade: ")); // Solicita a idade e converte pra número
+        if (idade >=18) {  // Verifica se é maior ou igual a 18
+            alert("Você é maior de idade!"); // Mostra esta mensagem com alert caso for maior de idade
+            
+        }else{
+            alert("Você é menor de idade!"); //Mostra esta mensagem com alert caso for menor de idade
+        }
+    </script>
+
+</body>
+</html>

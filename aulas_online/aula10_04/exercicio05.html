@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10/04 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4b5f30;
+            color: #ffebeb;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #1f4600;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px auto;
+            width: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+    <p>Escreva um programa que solicite que o usuário insira um número. O programa deve então exibir a tabuada de multiplicação para esse número, de 1 a 10, usando um loop FOR. Cada resultado deve ser claramente formatado.</p>
+    <p>Exibição dos números no console!!!</p>
+
+    <script>
+       let numero = parseInt(prompt("Digite o número desejado: ")) // Pede para usuário que digite um número 
+       for (let i=1; i <=10 ; i++) {  // O FOR repete enquanto 'i' for menor ou igual a 10
+                                     // O i é multiplicado pelo número escolhido pelo usuário 
+            console.log(numero+" x "+ i +" = "+ numero * i); //exibição no console da tabuada
+            }
+
+    </script>
+
+</body>
+</html>

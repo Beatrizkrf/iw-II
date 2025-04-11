@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10/04 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3a110f;
+            color: #ffebeb;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #ffc9b4;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px auto;
+            width: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+    <p>Crie um programa que solicite ao usuário que insira um número. Seu programa deve exibir uma contagem regressiva desse número até 0 usando um loop WHILE. Cada número deve ser impresso em uma nova linha.</p>
+    <p>Exibição dos números no console!!!</p>
+
+    <script>
+       let nn = parseInt(prompt("Digite o número desejado: ")) // Pede para usuário que digite um número 
+
+       while (nn>=0) { //laço while para que enquanto a variável for maior ou igual a 0, o loop continua executando
+        console.log(nn); //exibição no console e garantia que os números iram pular a linha
+        nn--; // Diminui 1 do valor de 'n' a cada repetição do loop
+       }
+    </script>
+
+</body>
+</html>
