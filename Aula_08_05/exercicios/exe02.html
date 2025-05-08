@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execicio 02</title>
+</head>
+<body>
+    <h1>Adicionar item a lista</h1>
+    <input id="novoItem" placeholder="Novo Item " />
+    <button id="adicionar"> Adicionar </button>
+    <ul id="lista"></ul>
+
+    <script>
+        document.getElementById("adicionar").addEventListener("click", function () {
+          const texto = document.getElementById("novoItem").value;
+          const li = document.createElement("li");
+          li.innerText = texto;
+          document.getElementById("lista").appendChild(li);
+          document.getElementtById("novoItem").value = "";
+
+        });
+      </script>
+    
+</body>
+</html>
+
+
+
