@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Exercício 4</h1>
+        <h2>Preencha o campo</h2>
+
+        <input type="text" id="campo" placeholder="Digite algo!!!"><hr>
+
+        <script>
+        const campo = document.getElementById('campo');
+
+        campo.addEventListener('blur', function() {
+            if (campo.value === '') {
+            alert('Preencha este campo!');
+            }else{
+                alert('Continue com foco');
+            }
+            });
+        </script>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

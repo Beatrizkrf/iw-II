@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Exercício 5</h1>
+        <h2>Exibir e Esconder Texto</h2>
+
+        <style>
+            #paragrafo {
+                overflow: hidden;                
+                transition: max-height 0.5s ease;              
+            }
+        </style>    
+    
+        <button id="toggle">Mostrar/Esconder</button>
+        <p id="paragrafo">Clique para texto desaparecer!</p><hr>
+    
+        <script>
+            const paragrafo = document.getElementById('paragrafo');
+            const button = document.getElementById('toggle');
+    
+            button.addEventListener('click', function() {
+                if (paragrafo.style.maxHeight === '0px' || paragrafo.style.maxHeight === '') {
+                    paragrafo.style.maxHeight = paragrafo.scrollHeight + 'px'; // Expande
+                } else {
+                    paragrafo.style.maxHeight = '0'; // Encolhe
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

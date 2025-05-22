@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Exercício 6</h1>
+        <h2>Copiar Conteúdo</h2>
+    
+        <div id="conteudo">
+            A friend to all is a friend to none
+        </div>
+        
+        <button id="copiar">Copiar Texto</button><hr>
+        
+        <script>
+            const botao = document.getElementById('copiar');
+            const conteudo = document.getElementById('conteudo');
+    
+            botao.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(conteudo.textContent);
+                    alert('Texto copiado!');
+                } catch (err) {
+                    alert('Erro ao copiar texto: ' + err);
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

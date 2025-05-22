@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Exercício 7</h1>
+        <h2>Borda Vermelha</h2>
+    
+        <style>        
+            .erro {
+                border: 2px solid red;
+            }
+        </style>
+
+        <label for="campoTexto">Digite algo (mínimo 5 caracteres):</label>
+        <input type="text" id="campoTexto" placeholder="Digite aqui..." />
+
+        <script>
+            const campoTexto = document.getElementById('campoTexto');
+
+            campoTexto.addEventListener('input', function() {
+                if (campoTexto.value.length < 5) {
+                    campoTexto.classList.add('erro'); 
+                } else {
+                    campoTexto.classList.remove('erro'); 
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

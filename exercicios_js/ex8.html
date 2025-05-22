@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Exercício 8</h1>
+        <h2> Quadrados Coloridos</h2>
+
+        <style>
+            #container {
+                display: flex;
+                gap: 10px;            
+                margin-top: 20px;
+            }
+            .quadrado {
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+        
+        <button id="gerarQuadrados"> Quadrados</button>
+
+        <div id="container"></div>
+
+        <script>
+            document.getElementById('gerarQuadrados').addEventListener('click', function() {
+                const container = document.getElementById('container');
+                container.innerHTML = ''; // Limpa os quadrados existentes
+
+                for (let i = 0; i < 5; i++) {
+                    const quadrado = document.createElement('div');
+                    quadrado.classList.add('quadrado');
+                    
+                    // Gerar cor aleatória
+                    const corAleatoria = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                    quadrado.style.backgroundColor = corAleatoria;
+                    
+                    container.appendChild(quadrado);
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
